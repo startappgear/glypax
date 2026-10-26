@@ -644,10 +644,11 @@ a {
 
 /* Tables */
 .legal .table-wrap {
+  --table-border: #cdbde0;
   margin: 1.2em 0 1.6em;
   overflow-x: auto;
   background: var(--surface);
-  border: 1px solid var(--line);
+  border: 1px solid var(--table-border);
   border-radius: 16px;
 }
 .legal table {
@@ -662,19 +663,29 @@ a {
   padding: 12px 14px;
   text-align: left;
   vertical-align: top;
-  border-bottom: 1px solid var(--line);
+  border: 1px solid var(--table-border);
 }
-.legal th + th,
-.legal td + td {
-  border-left: 1px solid var(--line);
+/* the wrapper draws the outer frame, so drop the cells' outer edges */
+.legal tr > :first-child {
+  border-left: 0;
 }
-.legal tbody tr:last-child td {
+.legal tr > :last-child {
+  border-right: 0;
+}
+.legal thead tr:first-child > * {
+  border-top: 0;
+}
+.legal tbody tr:last-child > * {
   border-bottom: 0;
 }
-.legal th {
-  background: #f6eefe;
+.legal thead th {
+  background: #f3e8fd;
   color: var(--ink);
   font-weight: 700;
+  border-bottom-width: 2px;
+}
+.legal tbody tr:nth-child(even) td {
+  background: #fcfaff;
 }
 
 .legal hr {
@@ -685,6 +696,52 @@ a {
 .legal .doc-note {
   font-size: 0.9375rem;
   color: var(--muted);
+}
+
+/* Support page ------------------------------------------------------------ */
+.support .support-lead {
+  margin: 16px 0 28px;
+  font-size: 1.1875rem;
+  color: var(--muted);
+}
+.support-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px 24px;
+  margin-bottom: 8px;
+  padding: 22px 24px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgb(48 18 82 / 0.06);
+}
+.support-card__body {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.support-card__label {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.legal .support-card__email {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: none;
+}
+.legal .support-card__email:hover {
+  color: var(--purple);
+  text-decoration: underline;
+}
+.legal .support-card .btn {
+  color: #fff;
+  text-decoration: none;
 }
 
 /* Responsive -------------------------------------------------------------- */
