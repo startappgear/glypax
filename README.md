@@ -1,32 +1,48 @@
-# Glypax — сайт (glypax.com)
+# Glypax website (glypax.com)
 
-Статичний сайт: HTML + CSS, без JavaScript, без збірки, без cookie і сторонніх запитів.
+A static landing page: plain HTML + CSS, no JavaScript, no build step, no cookies and no third-party requests (the font is self-hosted).
 
-## Як залити
+## Deploying
 
-Скопіюй **вміст** цієї папки в корінь сайту на сервері (туди, де має лежати `index.html`), щоб `https://glypax.com/` відкривав `index.html`.
+Upload the **contents** of this folder to the web root of your server (the folder that should serve `index.html`), so that `https://glypax.com/` opens `index.html`.
 
 ```
-index.html                 головна сторінка
-404.html                   сторінка "не знайдено"
-assets/css/styles.css      стилі
-assets/fonts/              шрифт Figtree (локально, без Google Fonts)
-assets/img/                лого, скріни застосунку, OG-картинка для прев'ю, іконки
+index.html                             landing page
+privacy-policy/index.html              https://glypax.com/privacy-policy/
+terms-of-use/index.html                https://glypax.com/terms-of-use/
+consumer-health-privacy-policy/index.html  https://glypax.com/consumer-health-privacy-policy/
+404.html                               "page not found" page
+assets/css/styles.css      styles
+assets/fonts/              Figtree font (self-hosted, no Google Fonts)
+assets/img/                logo, app screens, social preview image (og-image.png), app icons
 favicon.ico, favicon.svg, apple-touch-icon.png, site.webmanifest
 robots.txt, sitemap.xml
 ```
 
-### 404
-- **Apache / більшість хостингів:** додай у `.htaccess` рядок `ErrorDocument 404 /404.html`
+### 404 page
+- **Apache / most shared hosting:** add `ErrorDocument 404 /404.html` to `.htaccess`
 - **Nginx:** `error_page 404 /404.html;`
-- **Netlify, Cloudflare Pages, GitHub Pages:** `404.html` підхоплюється автоматично.
+- **Netlify, Cloudflare Pages, GitHub Pages:** `404.html` is picked up automatically.
 
-## Що де міняти
+## Legal pages
 
-- **Посилання на сторах, коли застосунок вийде:** у `index.html` два блоки `store-badge` у hero (`id="download"`) і два у футері. Заміни `<div class="store-badge" … role="img">` на `<a class="store-badge" href="ПОСИЛАННЯ">`, закрий `</a>` і прибери `<span class="store-badge__soon">Coming soon</span>`.
-- **Список у стрічці "Works with every GLP-1":** у `index.html` два однакові списки `marquee__list` — другий потрібен для безшовної прокрутки, тож міняй обидва однаково.
-- **Кольори:** змінні на початку `assets/css/styles.css` (`--purple` тощо).
-- **Домен:** `glypax.com` вказаний у `index.html` (canonical, og:url, og:image), `robots.txt` і `sitemap.xml`.
+Each legal page lives in its own folder as `index.html`, so the clean URLs work on any static host without rewrite rules (`/privacy-policy` redirects to `/privacy-policy/` automatically on Apache, Nginx and most hosts).
 
-## Cookie
-Сайт не ставить cookie і не має аналітики, тому cookie-банер не потрібен. Якщо пізніше додаси Google Analytics або інші трекери з cookie — тоді знадобиться банер згоди.
+The document text is kept exactly as in the source documents; only the markup was adapted to the site design (the documents' own links between each other now point to the new URLs). To update a policy, edit the text inside `<article class="container legal">` in the matching `index.html` and change the "Effective Date" line.
+
+Use these URLs in App Store Connect, Google Play Console and inside the app:
+- Privacy Policy: https://glypax.com/privacy-policy/
+- Terms of Use: https://glypax.com/terms-of-use/
+- Consumer Health Data Privacy Policy: https://glypax.com/consumer-health-privacy-policy/
+
+## Editing
+
+- **Store links (once the app is live):** `index.html` has two `store-badge` blocks in the hero (`id="download"`), and every page has two more in its footer. For each one, change `<div class="store-badge" … role="img">` to `<a class="store-badge" href="STORE_URL">`, change the closing `</div>` to `</a>`, and remove `<span class="store-badge__soon">Coming soon</span>`.
+- **"Works with popular GLP-1 medications" strip:** `index.html` contains six identical `marquee__list` lists — the copies keep the scrolling loop seamless on wide screens. Edit all six the same way. The list deliberately names only approved active ingredients (no brand names, no compounded or unapproved products) to keep app store review safe.
+- **Colors:** CSS variables at the top of `assets/css/styles.css` (`--purple`, etc.).
+- **Domain:** `glypax.com` appears in the canonical and social tags of every page, in `robots.txt` and in `sitemap.xml`.
+- **Header and footer** are repeated in every page (`index.html` and the three legal pages). If you change them, change all four.
+
+## Cookies
+
+The site sets no cookies and has no analytics, so no cookie banner is needed. If you later add Google Analytics or any other tracker that uses cookies, you will need a consent banner.
