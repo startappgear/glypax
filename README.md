@@ -30,12 +30,14 @@ robots.txt, sitemap.xml
 Each legal page lives in its own folder as `index.html`, so the clean URLs work on any static host without rewrite rules (`/privacy-policy` redirects to `/privacy-policy/` automatically on Apache, Nginx and most hosts).
 
 The document text is kept as in the source documents; only the markup was adapted to the site design (the documents' own links between each other now point to the new URLs). Deliberate wording changes (update your source documents to match):
-- **Consumer Health Data Privacy Policy:** Effective Date updated to October 27, 2026 (no text changes).
+- **All three documents:** deletion steps now read "Profile → Clear All Data" (Terms of Use and Consumer Health Data Privacy Policy previously said "in the App's settings").
+- **Consumer Health Data Privacy Policy:** Effective Date updated to October 27, 2026.
 - **Terms of Use (effective October 27, 2026):** "dose calculations" was replaced with "estimated active medication levels", plus a sentence stating that the App does not calculate or recommend medication doses.
-- **Privacy Policy (effective October 27, 2026):** removed every statement that an age bracket or gender is sent to analytics (Profile Data row, Analytics Data row, GDPR consent bullet), and stated that analytics events never contain profile details. Profile data is described as stored on the device only. Also removed the promise that analytics consent can be withdrawn in the App's settings (the app has no such toggle); analytics relies on legitimate interests. To update a policy, edit the text inside `<article class="container legal">` in the matching `index.html` and change the "Effective Date" line.
+- **Privacy Policy (effective October 27, 2026):** removed every statement that an age bracket or gender is sent to analytics (Profile Data row, Analytics Data row, GDPR consent bullet), and stated that analytics events never contain profile details. Profile data is described as stored on the device only. Added a "How to Delete Your Data" section (`#data-deletion`) with deletion steps and what is kept (kept data is deleted automatically; no deletion-on-request promise). Also removed the promise that analytics consent can be withdrawn in the App's settings (the app has no such toggle); analytics relies on legitimate interests. To update a policy, edit the text inside `<article class="container legal">` in the matching `index.html` and change the "Effective Date" line.
 
 Use these URLs in App Store Connect, Google Play Console and inside the app:
 - Support URL: https://glypax.com/support/
+- Data deletion URL (Google Play Data safety): https://glypax.com/privacy-policy/#data-deletion
 - Privacy Policy: https://glypax.com/privacy-policy/
 - Terms of Use: https://glypax.com/terms-of-use/
 - Consumer Health Data Privacy Policy: https://glypax.com/consumer-health-privacy-policy/
