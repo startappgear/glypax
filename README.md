@@ -29,7 +29,9 @@ robots.txt, sitemap.xml
 
 Each legal page lives in its own folder as `index.html`, so the clean URLs work on any static host without rewrite rules (`/privacy-policy` redirects to `/privacy-policy/` automatically on Apache, Nginx and most hosts).
 
-The document text is kept as in the source documents; only the markup was adapted to the site design (the documents' own links between each other now point to the new URLs). One deliberate wording change: in the Terms of Use, "dose calculations" was replaced with "estimated active medication levels", plus a sentence stating that the App does not calculate or recommend medication doses — update your source document to match. To update a policy, edit the text inside `<article class="container legal">` in the matching `index.html` and change the "Effective Date" line.
+The document text is kept as in the source documents; only the markup was adapted to the site design (the documents' own links between each other now point to the new URLs). Deliberate wording changes (update your source documents to match):
+- **Terms of Use (effective October 27, 2026):** "dose calculations" was replaced with "estimated active medication levels", plus a sentence stating that the App does not calculate or recommend medication doses.
+- **Privacy Policy (effective October 27, 2026):** removed every statement that an age bracket or gender is sent to analytics (Profile Data row, Analytics Data row, GDPR consent bullet), and stated that analytics events never contain profile details. Profile data is described as stored on the device only. Also removed the promise that analytics consent can be withdrawn in the App's settings (the app has no such toggle); analytics relies on legitimate interests. To update a policy, edit the text inside `<article class="container legal">` in the matching `index.html` and change the "Effective Date" line.
 
 Use these URLs in App Store Connect, Google Play Console and inside the app:
 - Support URL: https://glypax.com/support/
