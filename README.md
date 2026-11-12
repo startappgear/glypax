@@ -17,7 +17,7 @@ assets/css/styles.css      styles
 assets/fonts/              Figtree font (self-hosted, no Google Fonts)
 assets/img/                logo, app screens, social preview image (og-image.png), app icons
 favicon.ico, favicon.svg, apple-touch-icon.png, site.webmanifest
-robots.txt, sitemap.xml
+robots.txt, sitemap.xml, llms.txt (summary for AI assistants)
 ```
 
 ### 404 page
@@ -44,8 +44,14 @@ Use these URLs in App Store Connect, Google Play Console and inside the app:
 
 ## Editing
 
-- **Store links (once the app is live):** `index.html` has two `store-badge` blocks in the hero (`id="download"`), and every page has two more in its footer. For each one, change `<div class="store-badge" … role="img">` to `<a class="store-badge" href="STORE_URL">`, change the closing `</div>` to `</a>`, and remove `<span class="store-badge__soon">Coming soon</span>`.
-- **"Works with popular GLP-1 medications" strip:** `index.html` contains six identical `marquee__list` lists — the copies keep the scrolling loop seamless on wide screens. Edit all six the same way. The list deliberately names only approved active ingredients (no brand names, no compounded or unapproved products) to keep app store review safe.
+- **Store links:** Google Play is live (`https://play.google.com/store/apps/details?id=com.glypax.tracker`): the badge is an `<a class="store-badge store-badge--live" …>` in the hero of `index.html` and in every page's footer (5 places). The App Store badge is still "Coming soon". When the iOS app is live, do the same for its 5 badges: change `<div class="store-badge" … role="img">` to `<a class="store-badge store-badge--live" href="APP_STORE_URL" target="_blank" rel="noopener" aria-label="Download Glypax on the App Store">`, change the closing `</div>` to `</a>`, and remove `<span class="store-badge__soon">Coming soon</span>`. Then update the "coming soon to iOS" wording in the `index.html` meta/social descriptions, the FAQ, the JSON-LD (`operatingSystem`, `sameAs`) and `llms.txt`.
+- **"Works with popular GLP-1 medications" strip:** `index.html` contains six identical `marquee__list` lists — the copies keep the scrolling loop seamless on wide screens. Edit all six the same way. This strip is still hidden; the visible "Works with all popular GLP-1 medications" section (`#medications`) replaced it.
+- **Medication brand names:** the home page, FAQ, JSON-LD and `llms.txt` name brands (Ozempic®, Wegovy®, Mounjaro® …) next to their active ingredients, always with ® and the trademark/non-affiliation note under the medications list. Keep that note in sync if you add a brand. Keep brand names out of the store listing title and icon.
+- **AI and search visibility:**
+  - `index.html` `<head>` has one JSON-LD `@graph` (WebSite, Organization, MobileApplication, FAQPage). The FAQPage text must match the visible FAQ (`#faq`) word for word, so edit both together.
+  - `llms.txt` (site root) is a plain-Markdown summary of the app for AI assistants. Update it when features, pricing, platforms or medications change.
+  - `robots.txt` explicitly allows all search and AI crawlers.
+  - After deploying, submit `sitemap.xml` in Google Search Console and Bing Webmaster Tools (ChatGPT search and Copilot use Bing's index), and bump `<lastmod>` in `sitemap.xml` when a page changes.
 - **Colors:** CSS variables at the top of `assets/css/styles.css` (`--purple`, etc.).
 - **Domain:** `glypax.com` appears in the canonical and social tags of every page, in `robots.txt` and in `sitemap.xml`.
 - **Header and footer** are repeated in every page (`index.html`, `support/` and the three legal pages). If you change them, change all five.

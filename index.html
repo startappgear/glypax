@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Glypax: GLP-1 Tracker — Doses, Body Measurements &amp; Progress Photos</title>
-  <meta name="description" content="Log GLP-1 doses, estimated active levels and side effects while tracking 6 body measurements and 6 progress photo views, with progress photos kept 100% private on your device. Coming soon to iOS and Android.">
+  <meta name="description" content="Log GLP-1 doses, estimated active levels and side effects while tracking 6 body measurements and 6 progress photo views, with progress photos kept 100% private on your device. Available now on Android, coming soon to iOS.">
   <link rel="canonical" href="https://glypax.com/">
   <meta name="theme-color" content="#8D01FA">
   <meta name="color-scheme" content="light">
@@ -14,14 +14,14 @@
   <meta property="og:site_name" content="Glypax">
   <meta property="og:url" content="https://glypax.com/">
   <meta property="og:title" content="Glypax: GLP-1 Tracker — Built for Your Whole Body">
-  <meta property="og:description" content="Log doses, estimated active levels and side effects, track 6 body measurements and 6 progress photo views, and keep photos 100% private. Coming soon to iOS and Android.">
+  <meta property="og:description" content="Log doses, estimated active levels and side effects, track 6 body measurements and 6 progress photo views, and keep photos 100% private. Available now on Android, coming soon to iOS.">
   <meta property="og:image" content="https://glypax.com/assets/img/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Glypax app screens: dose tracking, body measurements and progress photos">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Glypax: GLP-1 Tracker — Built for Your Whole Body">
-  <meta name="twitter:description" content="Log doses, estimated active levels and side effects, track 6 body measurements and 6 progress photo views, and keep photos 100% private. Coming soon to iOS and Android.">
+  <meta name="twitter:description" content="Log doses, estimated active levels and side effects, track 6 body measurements and 6 progress photo views, and keep photos 100% private. Available now on Android, coming soon to iOS.">
   <meta name="twitter:image" content="https://glypax.com/assets/img/og-image.png">
 
   <!-- Icons -->
@@ -34,13 +34,140 @@
   <link rel="stylesheet" href="assets/css/styles.css">
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Glypax",
-    "alternateName": "Glypax: GLP-1 Tracker",
-    "url": "https://glypax.com/"
-  }
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://glypax.com/#website",
+      "name": "Glypax",
+      "alternateName": "Glypax: GLP-1 Tracker",
+      "url": "https://glypax.com/",
+      "publisher": {
+        "@id": "https://glypax.com/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://glypax.com/#organization",
+      "name": "Glypax",
+      "url": "https://glypax.com/",
+      "logo": "https://glypax.com/assets/img/icon-512.png",
+      "sameAs": [
+        "https://play.google.com/store/apps/details?id=com.glypax.tracker"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "url": "https://glypax.com/support/"
+      }
+    },
+    {
+      "@type": "MobileApplication",
+      "@id": "https://glypax.com/#app",
+      "name": "Glypax: GLP-1 Tracker",
+      "alternateName": [
+        "Glypax",
+        "GLP-1 Tracker: Glypax"
+      ],
+      "description": "Glypax is a GLP-1 tracker app for people taking semaglutide, tirzepatide and other GLP-1 medications. Log doses, injection sites and reminders, view an estimated active level chart based on logged doses, note side effects, log weight and 6 body measurements, take private progress photos from 6 views, and log daily protein, fiber and water. No account needed; health data and photos stay on your device. Glypax is a personal tracking tool, not a medical device.",
+      "url": "https://glypax.com/",
+      "image": "https://glypax.com/assets/img/og-image.png",
+      "screenshot": "https://glypax.com/assets/img/app-screens.png",
+      "applicationCategory": "HealthApplication",
+      "applicationSubCategory": "GLP-1 medication tracker",
+      "operatingSystem": "Android",
+      "installUrl": "https://play.google.com/store/apps/details?id=com.glypax.tracker",
+      "downloadUrl": "https://play.google.com/store/apps/details?id=com.glypax.tracker",
+      "publisher": {
+        "@id": "https://glypax.com/#organization"
+      },
+      "featureList": [
+        "GLP-1 dose log with dose, time and injection site",
+        "Dose schedule and reminders",
+        "Medication supply tracking",
+        "Estimated active level chart based on logged doses (informational, not a measurement)",
+        "Side effects log",
+        "Weight log",
+        "6 body measurements: waist, hips, chest, thigh, calf, biceps",
+        "Progress photos from 6 views, stored only on the device",
+        "Daily protein, fiber and water log",
+        "Data export and import",
+        "No account required"
+      ],
+      "keywords": "GLP-1 tracker, GLP-1 app, semaglutide tracker, tirzepatide tracker, Ozempic tracker, Wegovy tracker, Mounjaro tracker, Zepbound tracker, injection tracker, progress photos, body measurements",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "description": "Free to download with a 7-day free trial, then an auto-renewing subscription.",
+        "url": "https://play.google.com/store/apps/details?id=com.glypax.tracker"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://glypax.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Glypax?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Glypax is a GLP-1 tracker app. It helps you log GLP-1 medication doses and reminders, view an estimated active level chart based on your logged doses, note side effects, log weight and 6 body measurements, take progress photos from 6 views, and log daily protein, fiber and water."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which GLP-1 medications does Glypax support?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Glypax works with all popular GLP-1 medications, including semaglutide (Ozempic®, Wegovy®, Rybelsus®), tirzepatide (Mounjaro®, Zepbound®), liraglutide (Victoza®, Saxenda®), dulaglutide (Trulicity®) and exenatide (Byetta®, Bydureon® BCise®)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Glypax free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Glypax is free to download and starts with a 7-day free trial. After the trial, it continues as a subscription. You can cancel any time in your Google Play account."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Glypax available on Android and iPhone?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Glypax is available now on Android from Google Play. The iPhone version is coming soon to the App Store."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are my health data and progress photos private?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Your medications, doses, side effects, measurements, nutrition logs, notes and progress photos are stored only on your device. Glypax has no accounts, and we never receive your health data or photos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to create an account?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Glypax works without an account or sign-up. You can export your data to a file and import it on another device."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Glypax give medical advice or calculate doses?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Glypax is a personal tracking tool, not a medical device. It does not calculate or recommend medication doses. The estimated active level is an informational chart based on the doses you log, not a measurement. Always follow your healthcare provider's instructions."
+          }
+        }
+      ]
+    }
+  ]
+}
   </script>
 </head>
 <body>
@@ -74,18 +201,17 @@
           </p>
 
           <div class="hero__stores" id="download">
-            <h2 class="visually-hidden">Download Glypax — coming soon</h2>
+            <h2 class="visually-hidden">Download Glypax</h2>
             <div class="stores">
               <div class="store-badge" aria-label="App Store — coming soon" role="img">
                 <svg class="store-badge__icon" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>
                 <span class="store-badge__text"><small>Download on the</small><strong>App Store</strong></span>
                 <span class="store-badge__soon">Coming soon</span>
               </div>
-              <div class="store-badge" aria-label="Google Play — coming soon" role="img">
+              <a class="store-badge store-badge--live" href="https://play.google.com/store/apps/details?id=com.glypax.tracker" target="_blank" rel="noopener" aria-label="Get Glypax on Google Play">
                 <svg class="store-badge__icon" viewBox="0 0 24 26" aria-hidden="true"><path fill="#4285F4" d="M1.6 1.2 13.2 13 1.6 24.8c-.4-.3-.6-.8-.6-1.4V2.6c0-.6.2-1.1.6-1.4z"/><path fill="#34A853" d="M1.6 1.2c.5-.4 1.3-.5 2-.1l13.7 7.8-4.1 4.1z"/><path fill="#FBBC04" d="m17.3 8.9 4.1 2.3c1.3.8 1.3 2.8 0 3.6l-4.1 2.3-4.1-4.1z"/><path fill="#EA4335" d="M13.2 13l4.1 4.1-13.7 7.8c-.7.4-1.5.3-2-.1z"/></svg>
                 <span class="store-badge__text"><small>GET IT ON</small><strong>Google Play</strong></span>
-                <span class="store-badge__soon">Coming soon</span>
-              </div>
+              </a>
             </div>
           </div>
         </div>
@@ -95,6 +221,93 @@
             <source type="image/webp" srcset="assets/img/app-screens-900.webp 900w, assets/img/app-screens.webp 1409w" sizes="(max-width: 960px) 100vw, 560px">
             <img src="assets/img/app-screens.png" width="1409" height="908" alt="Glypax app screens: weight goal progress, body measurements log, next dose and estimated active level, progress photos, and daily water, protein and fiber tracking" fetchpriority="high">
           </picture>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section" id="features" aria-labelledby="features-title">
+      <div class="container">
+        <h2 class="section__title" id="features-title">A GLP-1 tracker for your whole body</h2>
+        <p class="section__lead">Glypax is a GLP-1 medication tracker app for people taking semaglutide, tirzepatide and other GLP-1 medications. It brings doses, side effects, body measurements, progress photos and nutrition together in one private app.</p>
+        <ul class="features">
+          <li class="feature">
+            <h3>Doses, schedule and reminders</h3>
+            <p>Log each injection or pill with dose, time and injection site, keep track of your medication supply, and get reminders for your next dose.</p>
+          </li>
+          <li class="feature">
+            <h3>Estimated active level</h3>
+            <p>View an estimated active level chart based on the doses and times you log. It's for your reference only, not a measurement or medical advice.</p>
+          </li>
+          <li class="feature">
+            <h3>Side effects</h3>
+            <p>Note side effects and how you feel, and review your history over time.</p>
+          </li>
+          <li class="feature">
+            <h3>Weight and 6 body measurements</h3>
+            <p>Log weight plus waist, hips, chest, thigh, calf and biceps, and see all your measurements in one place.</p>
+          </li>
+          <li class="feature">
+            <h3>6 progress photo views</h3>
+            <p>Take progress photos from 6 views, including face, skin and hair. Photos stay 100% private on your device.</p>
+          </li>
+          <li class="feature">
+            <h3>Protein, fiber and water</h3>
+            <p>Log daily protein, fiber and water and compare them with goals you set.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Supported medications -->
+    <section class="section" id="medications" aria-labelledby="medications-title">
+      <div class="container">
+        <h2 class="section__title" id="medications-title">Works with all popular GLP-1 medications</h2>
+        <p class="section__lead">Track weekly injections, daily injections and daily pills, whichever GLP‑1 or dual GIP/GLP‑1 medication you take.</p>
+        <ul class="meds">
+          <li><strong>Semaglutide</strong> <span>Ozempic®, Wegovy®, Rybelsus®</span></li>
+          <li><strong>Tirzepatide</strong> <span>Mounjaro®, Zepbound®</span></li>
+          <li><strong>Liraglutide</strong> <span>Victoza®, Saxenda®</span></li>
+          <li><strong>Dulaglutide</strong> <span>Trulicity®</span></li>
+          <li><strong>Exenatide</strong> <span>Byetta®, Bydureon® BCise®</span></li>
+        </ul>
+        <p class="trademark-note">Ozempic®, Wegovy®, Rybelsus®, Victoza® and Saxenda® are registered trademarks of Novo Nordisk A/S. Mounjaro®, Zepbound® and Trulicity® are registered trademarks of Eli Lilly and Company. Byetta® and Bydureon® BCise® are registered trademarks of the AstraZeneca group of companies. Glypax is an independent app and is not affiliated with, sponsored by or endorsed by these companies.</p>
+      </div>
+    </section>
+
+    <!-- FAQ (keep in sync with the FAQPage JSON-LD in <head>) -->
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="container">
+        <h2 class="section__title" id="faq-title">Frequently asked questions</h2>
+        <div class="faq">
+          <div class="faq__item">
+            <h3>What is Glypax?</h3>
+            <p>Glypax is a GLP-1 tracker app. It helps you log GLP-1 medication doses and reminders, view an estimated active level chart based on your logged doses, note side effects, log weight and 6 body measurements, take progress photos from 6 views, and log daily protein, fiber and water.</p>
+          </div>
+          <div class="faq__item">
+            <h3>Which GLP-1 medications does Glypax support?</h3>
+            <p>Glypax works with all popular GLP-1 medications, including semaglutide (Ozempic®, Wegovy®, Rybelsus®), tirzepatide (Mounjaro®, Zepbound®), liraglutide (Victoza®, Saxenda®), dulaglutide (Trulicity®) and exenatide (Byetta®, Bydureon® BCise®).</p>
+          </div>
+          <div class="faq__item">
+            <h3>Is Glypax free?</h3>
+            <p>Glypax is free to download and starts with a 7-day free trial. After the trial, it continues as a subscription. You can cancel any time in your Google Play account.</p>
+          </div>
+          <div class="faq__item">
+            <h3>Is Glypax available on Android and iPhone?</h3>
+            <p>Glypax is available now on Android from <a href="https://play.google.com/store/apps/details?id=com.glypax.tracker" target="_blank" rel="noopener">Google Play</a>. The iPhone version is coming soon to the App Store.</p>
+          </div>
+          <div class="faq__item">
+            <h3>Are my health data and progress photos private?</h3>
+            <p>Yes. Your medications, doses, side effects, measurements, nutrition logs, notes and progress photos are stored only on your device. Glypax has no accounts, and we never receive your health data or photos.</p>
+          </div>
+          <div class="faq__item">
+            <h3>Do I need to create an account?</h3>
+            <p>No. Glypax works without an account or sign-up. You can export your data to a file and import it on another device.</p>
+          </div>
+          <div class="faq__item">
+            <h3>Does Glypax give medical advice or calculate doses?</h3>
+            <p>No. Glypax is a personal tracking tool, not a medical device. It does not calculate or recommend medication doses. The estimated active level is an informational chart based on the doses you log, not a measurement. Always follow your healthcare provider's instructions.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -169,11 +382,10 @@
               <span class="store-badge__text"><small>Download on the</small><strong>App Store</strong></span>
               <span class="store-badge__soon">Coming soon</span>
             </div>
-            <div class="store-badge" aria-label="Google Play — coming soon" role="img">
+            <a class="store-badge store-badge--live" href="https://play.google.com/store/apps/details?id=com.glypax.tracker" target="_blank" rel="noopener" aria-label="Get Glypax on Google Play">
               <svg class="store-badge__icon" viewBox="0 0 24 26" aria-hidden="true"><path fill="#4285F4" d="M1.6 1.2 13.2 13 1.6 24.8c-.4-.3-.6-.8-.6-1.4V2.6c0-.6.2-1.1.6-1.4z"/><path fill="#34A853" d="M1.6 1.2c.5-.4 1.3-.5 2-.1l13.7 7.8-4.1 4.1z"/><path fill="#FBBC04" d="m17.3 8.9 4.1 2.3c1.3.8 1.3 2.8 0 3.6l-4.1 2.3-4.1-4.1z"/><path fill="#EA4335" d="M13.2 13l4.1 4.1-13.7 7.8c-.7.4-1.5.3-2-.1z"/></svg>
               <span class="store-badge__text"><small>GET IT ON</small><strong>Google Play</strong></span>
-              <span class="store-badge__soon">Coming soon</span>
-            </div>
+            </a>
           </div>
         </div>
 
